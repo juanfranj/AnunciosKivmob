@@ -28,6 +28,9 @@ class Pantalla(BoxLayout):
         self.ids.label.text = "Mostrar Intersticial"
         self.ads.request_interstitial()
         self.ads.show_interstitial()
+    
+    def mostrar_video(self):
+        self.ids.label.text = "Mostrar video"
 
 class MainApp(App):
 
