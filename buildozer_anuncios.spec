@@ -209,14 +209,14 @@ android.ndk = 25b
 #android.add_resources =
 
 # (list) Gradle dependencies to add
-#android.gradle_dependencies = com.google.firebase:firebase-ads:21.4.0
+android.gradle_dependencies = com.google.firebase:firebase-ads:21.4.0
 #android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
 #androidx.appcompat:appcompat:1.6.1, androidx.activity:activity:1.6.1
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
 # android.enable_androidx requires android.api >= 28
-#android.enable_androidx = True
+android.enable_androidx = True
 
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
@@ -271,7 +271,7 @@ android.ndk = 25b
 
 # (list) Android application meta-data to set (key=value format)
 
-#android.meta_data = com.google.android.gms.APPLICATION_ID = ca-app-pub-3378097856628013~1859515228
+android.meta_data = com.google.android.gms.APPLICATION_ID = ca-app-pub-3378097856628013~1859515228
 
 
 # (list) Android library project to add (will be added in the
