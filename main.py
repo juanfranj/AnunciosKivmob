@@ -15,7 +15,16 @@ from kivy.uix.popup import Popup
     
 
 class Mensaje_Popup(Popup):
-    pass  
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.app = MDApp.get_running_app()
+        self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+        self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+        self.app.banner.show()
+        
+    def salir_popup(self):
+        self.dismiss()
+        self.app.interstitial.show()
 
 
 class Pantalla(BoxLayout):
