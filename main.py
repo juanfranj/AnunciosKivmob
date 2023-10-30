@@ -21,7 +21,7 @@ class Mensaje_Popup(Popup):
         self.ads = KivAds()
         self.app = MDApp.get_running_app()
         self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
-        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(int(Window.width)), True)
+        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
         
     
     def on_open(self):
@@ -35,7 +35,7 @@ class Mensaje_Popup(Popup):
         # while not self.app.banner.is_loaded():
         #     sleep(.5)
         sleep(3)
-        self.app.banner.show()
+        self.banner.show()
 
 
 class Pantalla(BoxLayout):
