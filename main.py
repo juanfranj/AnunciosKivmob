@@ -23,11 +23,12 @@ class Mensaje_Popup(Popup):
 
         #self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
         
-        
-    
     def on_open(self):
         if not self.app.interstitial.is_loaded() or self.app.interstitial.is_dismissed() is True:
             self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+
+        self.app.banner_ppal.hide()
+        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
 
         #self.cargar_banner()
     
@@ -103,7 +104,7 @@ class MainApp(MDApp):
 
         return self.root
     
-    def on_resume(self):
+    def on_start(self):
         while not self.banner_ppal.is_loaded():
             #self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
             sleep(.1)
