@@ -21,7 +21,8 @@ class Mensaje_Popup(Popup):
         self.app = MDApp.get_running_app()
         self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
-       
+        self.cargar_banner()
+        
     def salir_popup(self):
         self.dismiss()
         self.app.interstitial.show()
