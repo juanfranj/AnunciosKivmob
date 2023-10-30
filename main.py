@@ -23,7 +23,7 @@ class Mensaje_Popup(Popup):
         self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(self.width), True)
         
     
-    def on_pre_open(self):
+    def on_open(self):
         self.cargar_banner()
 
     def salir_popup(self):
