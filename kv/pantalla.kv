@@ -20,17 +20,10 @@
         text: "Mostar banner"
         background_normal: ""
         background_color: 161/255,251/255,142/255,.8
-        on_release: app.banner.show()
+        on_release: self.mostrar()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
 
-    Button:
-        text: "Quitar banner"
-        background_normal: ""
-        background_color: 255/255,254/255,145/255,.8
-        on_release: root.quitar()
-        font_size: "30dp"
-        color: 0.2,0.2,0.2,0.8
     Button:
         text: "Mostar Intersticial"
         background_normal: ""
@@ -38,10 +31,18 @@
         on_release: root.mostrar_intersticial()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
+
     Button:
         text: "Mostar Video"
         background_normal: ""
         background_color: 238/255,138/255,248/255,.8
         on_release: root.mostrar_video()
+        font_size: "30dp"
+        color: 0.2,0.2,0.2,0.8
+    Button:
+        text: "Quitar banner"
+        background_normal: ""
+        background_color: 255/255,254/255,145/255,.8
+        on_release: root.cargar_anuncios()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8

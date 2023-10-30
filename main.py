@@ -26,12 +26,14 @@ class Pantalla(BoxLayout):
         self.ids.label.text = "Mostrar Banner"
         self.app.banner.show()
 
-    def quitar(self):
-        self.ids.label.text = "Quitar Banner"
+    def cargar_anuncios(self):
+        self.ids.label.text = "Cargando anuncios"
+        self.app.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.app.banner.hide()
 
     def mostrar_intersticial(self):
         self.ids.label.text = "Mostrar Intersticial"
+        self.app.interstitial.show()
     
     def mostrar_video(self):
         self.ids.label.text = "Mostrar video"
@@ -42,11 +44,12 @@ class MainApp(MDApp):
         self.root = Builder.load_file("main.kv")
         self.title = "PruebaAnuncios"
         self.ads = KivAds()
-        self.banner = BannerAd(TestID.BANNER, int(Window.width))
+        self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
+        self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
 
         return self.root
     
-    def on_enter(self):
+    def on_pre_enter(self):
         self.banner.show()
     
 
