@@ -7,7 +7,7 @@ from kivads import (
     TestID,
 )
 
-from kivy.app import App 
+from kivymd.app import MDApp 
 from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
@@ -20,7 +20,7 @@ class Pantalla(BoxLayout):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.app = App.get_running_app()
+        self.app = MDApp.get_running_app()
 
     def mostrar(self):
         self.ids.label.text = "Mostrar Banner"
@@ -28,7 +28,7 @@ class Pantalla(BoxLayout):
 
     def quitar(self):
         self.ids.label.text = "Quitar Banner"
-        self.app.benner.hide()
+        self.app.banner.hide()
 
     def mostrar_intersticial(self):
         self.ids.label.text = "Mostrar Intersticial"
