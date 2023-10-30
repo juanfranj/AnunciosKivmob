@@ -46,7 +46,9 @@ class MainApp(MDApp):
         self.root = Builder.load_file("main.kv")
         self.title = "PruebaAnuncios"
         self.ads = KivAds()
-        self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
+        
+        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+        #self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
         self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd(TestID.REWARD)
 
