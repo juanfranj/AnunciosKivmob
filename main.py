@@ -91,7 +91,7 @@ class MainApp(MDApp):
         self.ads = KivAds()
         
         self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
-        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
+        #self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", True)
         
         #self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)#
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
@@ -103,7 +103,7 @@ class MainApp(MDApp):
 
         return self.root
     
-    def on_start(self):
+    def on_resume(self):
         while not self.banner_ppal.is_loaded():
             #self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
             sleep(.1)
