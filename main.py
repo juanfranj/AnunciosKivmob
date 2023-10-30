@@ -31,9 +31,9 @@ class Mensaje_Popup(Popup):
         self.app.interstitial.show()
     
     def cargar_banner(self):
-         while not self.app.banner.is_loaded():
-             sleep(.5)
-         self.app.banner.show()
+        while not self.app.banner.is_loaded():
+            sleep(.5)
+        self.app.banner.show()
 
 
 class Pantalla(BoxLayout):
