@@ -210,8 +210,8 @@ android.add_src = src
 
 # (list) Gradle dependencies to add
 #android.gradle_dependencies = com.google.firebase:firebase-ads:21.4.0
-#android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
-android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
+android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
+#android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
