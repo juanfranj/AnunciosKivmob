@@ -21,12 +21,13 @@ class Mensaje_Popup(Popup):
         self.ads = KivAds()
         self.app = MDApp.get_running_app()
         #self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
-        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
+        #self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         
     
     def on_open(self):
-        self.cargar_banner()
+        pass
+        #self.cargar_banner()
     
     def on_dismiss(self):
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
