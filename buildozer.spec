@@ -270,7 +270,7 @@ android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-android.meta_data = com.google.android.gms.APPLICATION_ID = ca-app-pub-3378097856628013~1859515228
+android.meta_data = com.google.android.gms.APPLICATION_ID=ca-app-pub-3378097856628013~1859515228
 
 ##para test
 #android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
