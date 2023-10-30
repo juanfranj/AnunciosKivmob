@@ -18,16 +18,13 @@ from time import sleep
 class Mensaje_Popup(Popup):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        #self.ads = KivAds()
         self.app = MDApp.get_running_app()
-        #self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         #self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
-        #self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+        
         
     
     def on_open(self):
         if not self.app.interstitial.is_loaded() or self.app.interstitial.is_dismissed() is True:
-            #self.app.interstitial.load()
             self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
 
         #self.cargar_banner()
@@ -58,7 +55,7 @@ class Pantalla(BoxLayout):
 
     def mostrar(self):
         self.ids.label.text = "Banner"
-        self.app.banner.show()
+        self.app.banner_ppal.show()
 
     def cargar_anuncios(self):
         self.ids.label.text = "Cargando anuncios"
@@ -67,7 +64,7 @@ class Pantalla(BoxLayout):
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
         #self.reward = RewardedAd(TestID.REWARD)
         self.reward_interstitial = RewardedInterstitial("ca-app-pub-3378097856628013/4574954697")
-        self.app.banner.hide()
+        self.app.banner_ppal.hide()
 
     def mostrar_intersticial(self):
         self.ids.label.text = "Intersticial"
@@ -93,8 +90,8 @@ class MainApp(MDApp):
         self.title = "PruebaAnuncios"
         self.ads = KivAds()
         
-        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
-        #self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
+        self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+        #self.banner = BannerAd(TestID.BANNER, int(Window.width), True)#
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
@@ -106,7 +103,8 @@ class MainApp(MDApp):
     
     def on_start(self):
         while not self.banner.is_loaded():
-            sleep(.2)
+            self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+            #sleep(.2)
         self.banner.show()
     
 
