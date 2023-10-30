@@ -19,7 +19,7 @@ class Mensaje_Popup(Popup):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
-        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
+        #self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
 
         #self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
         
@@ -32,7 +32,7 @@ class Mensaje_Popup(Popup):
         #self.cargar_banner()
     
     def mostrar_banner(self):
-        self.banner_popup.show()
+        self.app.banner_popup.show()
 
     def salir_popup(self):
         self.app.interstitial.show()
@@ -91,6 +91,8 @@ class MainApp(MDApp):
         self.ads = KivAds()
         
         self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
+        
         #self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)#
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
