@@ -33,7 +33,7 @@ class Mensaje_Popup(Popup):
     
     def mostrar_banner(self):
         try:
-            self.banner_popup = BannerAd("ca-app-pub-3378097856628013/5884963091", "BANNER", False)
+            self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", False)
             self.banner_popup.show()
         except:
             self.app.banner_ppal.hide()
@@ -84,8 +84,10 @@ class Pantalla(BoxLayout):
 
     
     def mostrar_popup(self):
+        self.app.banner_ppal.hide()
         popup = Mensaje_Popup()
         popup.open()
+        
 
 class MainApp(MDApp):
 
