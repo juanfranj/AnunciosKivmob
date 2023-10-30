@@ -18,9 +18,10 @@ from time import sleep
 class Mensaje_Popup(Popup):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.ads = KivAds()
         self.app = MDApp.get_running_app()
         self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
-        #self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(int(Window.width)), True)
+        self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(int(Window.width)), True)
         
     
     def on_open(self):
