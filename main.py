@@ -38,6 +38,7 @@ class Pantalla(BoxLayout):
     
     def mostrar_video(self):
         self.ids.label.text = "Mostrar video"
+        self.app.reward.show()
 
 class MainApp(MDApp):
 
