@@ -85,8 +85,8 @@ class MainApp(MDApp):
     
     def on_start(self):
         while not self.banner.is_loaded():
-            self.banner.show()
             sleep(.5)
+        self.banner.show()
     
 
 if __name__ == '__main__':
