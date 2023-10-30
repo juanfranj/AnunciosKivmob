@@ -36,7 +36,7 @@ class Mensaje_Popup(Popup):
     def salir_popup(self):
         self.dismiss()
         #self.app.interstitial.show()
-        self.interstitial.show()
+        self.app.interstitial.show()
 
     def cargar_banner(self):
         # while not self.app.banner.is_loaded():
