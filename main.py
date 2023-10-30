@@ -19,7 +19,7 @@ class Mensaje_Popup(Popup):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
-        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", self.width, True)
+        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
 
         #self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
         
