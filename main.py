@@ -27,14 +27,12 @@ class Mensaje_Popup(Popup):
         if not self.app.interstitial.is_loaded() or self.app.interstitial.is_dismissed() is True:
             self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
 
-        #self.cargar_banner()
+        self.cargar_banner()
     
     # def on_dismiss(self):
     #     self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
 
-
     def salir_popup(self):
-        
         self.app.interstitial.show()
         self.app.interstitial.load("ca-app-pub-3378097856628013/5566502540")
         self.dismiss()
@@ -42,8 +40,8 @@ class Mensaje_Popup(Popup):
     def cargar_banner(self):
         # while not self.app.banner.is_loaded():
         #     sleep(.5)
-        sleep(5)
-        self.banner.show()
+        sleep(1)
+        self.app.banner_popup.show()
 
 
 class Pantalla(BoxLayout):
@@ -91,7 +89,7 @@ class MainApp(MDApp):
         self.ads = KivAds()
         
         self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
-        #self.banner = BannerAd(TestID.BANNER, int(Window.width), True)#
+        self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)#
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
