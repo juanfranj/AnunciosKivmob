@@ -89,7 +89,7 @@ class MainApp(MDApp):
         self.ads = KivAds()
         
         #self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
-        self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", True)
+        self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", self.width, True)
         #self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)#
         self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
