@@ -20,16 +20,16 @@ class Mensaje_Popup(Popup):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
         self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
-        self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
+        self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(self.width), True)
         self.cargar_banner()
-        
+
     def salir_popup(self):
         self.dismiss()
         self.app.interstitial.show()
     
     def cargar_banner(self):
          while not self.app.banner.is_loaded():
-             sleep(.2)
+             sleep(.5)
          self.app.banner.show()
 
 
