@@ -46,7 +46,7 @@
     Button:
         text: "Popup"
         background_normal: ""
-        background_color: 255/255,254/255,145/255,.8
+        background_color: 240/255,155/255,89/255,.8
         on_release: root.mostrar_popup()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
@@ -61,4 +61,48 @@
     title: "" 
     separator_height: 0      
     background_color: [251/255, 252/255, 252/255, 0]
+    BoxLayout:
+        orientation: "vertical"
+        size_hint: .95, .6
+        padding: "5dp", "5dp"
+        spacing: "10dp"
+        canvas.before:
+            Color:
+                rgba: (174/255, 214/255, 241/255, .9)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [10]
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 1, 9
+            padding: "5dp", "5dp"
+            spacing: "10dp"
+
+            Label:
+                #size_hint: .95, 0.08
+                pos_hint:{'center_x':0.5, 'top': .9}
+                text: "Prueba Pop-up con anuncios "
+                font_size: "22sp"
+            Button:
+                text: "Salir"
+                background_normal: ""
+                background_color: 161/255,251/255,142/255,.8
+                on_release: root.dismiss()
+                font_size: "30dp"
+                color: 0.2,0.2,0.2,0.8
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 1, .1
+            padding: "5dp", "5dp"
+            spacing: "10dp"
+
+            Label:
+                #size_hint: .95, 0.08
+                pos_hint:{'center_x':0.5, 'top': .9}
+                text: "Publicidad"
+                font_size: "16sp"
+            
+            
+    
     
