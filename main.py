@@ -49,7 +49,8 @@ class MainApp(MDApp):
         
         self.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
         #self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
-        self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
+        self.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+        #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd(TestID.REWARD)
 
 
