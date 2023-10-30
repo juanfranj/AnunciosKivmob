@@ -36,7 +36,7 @@ class Mensaje_Popup(Popup):
     def salir_popup(self):
         
         self.app.interstitial.show()
-        #self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+        self.app.interstitial.load("ca-app-pub-3378097856628013/5566502540")
         self.dismiss()
 
     def cargar_banner(self):
