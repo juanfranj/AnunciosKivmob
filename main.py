@@ -12,6 +12,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.popup import Popup
+from time import sleep
     
 
 class Mensaje_Popup(Popup):
@@ -21,7 +22,7 @@ class Mensaje_Popup(Popup):
         self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
         self.app.banner = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
         self.app.banner.show()
-        
+
     def salir_popup(self):
         self.dismiss()
         self.app.interstitial.show()
@@ -83,7 +84,9 @@ class MainApp(MDApp):
         return self.root
     
     def on_start(self):
-        self.banner.show()
+        while not self.banner.is_loaded():
+            self.banner.show()
+            sleep(.5)
     
 
 if __name__ == '__main__':
