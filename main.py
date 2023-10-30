@@ -36,7 +36,7 @@ class Pantalla(BoxLayout):
     def mostrar_video(self):
         self.ids.label.text = "Mostrar video"
 
-class MainApp(App):
+class MainApp(MDApp):
 
     def build(self):
         self.root = Builder.load_file("main.kv")
@@ -44,8 +44,10 @@ class MainApp(App):
         self.ads = KivAds()
         self.banner = BannerAd(TestID.BANNER, int(Window.width))
 
-        
         return self.root
+    
+    def on_enter(self):
+        self.banner.show()
     
 
 if __name__ == '__main__':
