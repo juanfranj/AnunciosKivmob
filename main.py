@@ -33,10 +33,10 @@ class Mensaje_Popup(Popup):
     
     def mostrar_banner(self):
         try:
-            self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", "BANNER", False)
+            self.banner_popup = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), False)
             self.banner_popup.show()
         except:
-            self.app.banner_ppal.hide()
+            pass
 
     def salir_popup(self):
         self.app.interstitial.show()
