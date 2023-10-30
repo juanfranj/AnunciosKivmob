@@ -12,7 +12,7 @@ class Pantalla(BoxLayout):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.ads.new_banner('ca-app-pub-3940256099942544/6300978111',True)
+        self.ads.new_banner(TestIds.BANNER,True)
         self.ads.new_interstitial(TestIds.INTERSTITIAL)
 
     def mostrar(self):
