@@ -26,7 +26,7 @@ class Pantalla(BoxLayout):
         self.app = MDApp.get_running_app()
 
     def mostrar(self):
-        self.ids.label.text = "Mostrar Banner"
+        self.ids.label.text = "Banner"
         self.app.banner.show()
 
     def cargar_anuncios(self):
@@ -35,15 +35,21 @@ class Pantalla(BoxLayout):
         #self.app.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
         #self.reward = RewardedAd(TestID.REWARD)
+        self.reward_interstitial = RewardedInterstitial("ca-app-pub-3378097856628013/4574954697")
         self.app.banner.hide()
 
     def mostrar_intersticial(self):
-        self.ids.label.text = "Mostrar Intersticial"
+        self.ids.label.text = "Intersticial"
         self.app.interstitial.show()
     
     def mostrar_video(self):
-        self.ids.label.text = "Mostrar video"
+        self.ids.label.text = "Bonificado"
         self.app.reward.show()
+    
+    def mostrar_intersticia_bonificado(self):
+        self.ids.label.text = "Intersticial Bonificado"
+        self.app.reward_interstitial.show()
+
     
     def mostrar_popup(self):
         popup = Mensaje_Popup()
@@ -62,6 +68,7 @@ class MainApp(MDApp):
         #self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
         #self.reward = RewardedAd(TestID.REWARD)
+        self.reward_interstitial = RewardedInterstitial("ca-app-pub-3378097856628013/4574954697")
 
 
         return self.root

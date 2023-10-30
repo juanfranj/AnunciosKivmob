@@ -14,7 +14,7 @@
         font_size: "25sp"
 
     Button:
-        text: "Mostar banner"
+        text: "Banner"
         background_normal: ""
         background_color: 161/255,251/255,142/255,.8
         on_release: root.mostrar()
@@ -22,7 +22,7 @@
         color: 0.2,0.2,0.2,0.8
 
     Button:
-        text: "Mostar Intersticial"
+        text: "Intersticial"
         background_normal: ""
         background_color: 50/255,130/255,246/255,.8
         on_release: root.mostrar_intersticial()
@@ -30,10 +30,26 @@
         color: 0.2,0.2,0.2,0.8
 
     Button:
-        text: "Mostar Video"
+        text: "Bonificado"
         background_normal: ""
         background_color: 238/255,138/255,248/255,.8
         on_release: root.mostrar_video()
+        font_size: "30dp"
+        color: 0.2,0.2,0.2,0.8
+
+    Button:
+        text: "Intersticia Bonificado"
+        background_normal: ""
+        background_color: 22/255,65/255,124/255,.8
+        on_release: root.mostrar_intersticia_bonificado()
+        font_size: "30dp"
+        color: 0.2,0.2,0.2,0.8
+
+    Button:
+        text: "Popup"
+        background_normal: ""
+        background_color: 240/255,155/255,89/255,.8
+        on_release: root.mostrar_popup()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
     Button:
@@ -43,13 +59,7 @@
         on_release: root.cargar_anuncios()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
-    Button:
-        text: "Popup"
-        background_normal: ""
-        background_color: 240/255,155/255,89/255,.8
-        on_release: root.mostrar_popup()
-        font_size: "30dp"
-        color: 0.2,0.2,0.2,0.8
+    
 
     Label:
         text:""
@@ -59,16 +69,18 @@
     size_hint: 0.95, 0.95
     pos_hint: {"center_x": 0.5, "center_y": 0.5}
     title: "" 
-    separator_height: 0      
+    separator_height: 0
+    background_normal: ""    
     background_color: [251/255, 252/255, 252/255, 0]
     BoxLayout:
         orientation: "vertical"
         size_hint: .95, .6
+        pos_hint:{'center_x':0.5, 'top': .9}
         padding: "5dp", "5dp"
         spacing: "10dp"
         canvas.before:
             Color:
-                rgba: (174/255, 214/255, 241/255, .9)
+                rgba: (245/255, 245/255, 245/255, .9)
             RoundedRectangle:
                 size: self.size
                 pos: self.pos
