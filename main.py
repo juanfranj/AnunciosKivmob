@@ -102,7 +102,7 @@ class MainApp(MDApp):
         return self.root
     
     def on_start(self):
-        while not self.banner_ppal.is_loaded():
+        if not self.banner_ppal.is_loaded():
             self.banner_ppal = BannerAd("ca-app-pub-3378097856628013/7930099553", int(Window.width), True)
             #sleep(.2)
         self.banner_ppal.show()
