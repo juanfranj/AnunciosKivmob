@@ -26,7 +26,7 @@ class Mensaje_Popup(Popup):
         
     
     def on_open(self):
-        if not self.app.interstitial.is_load():
+        if not self.app.interstitial.is_loaded():
             self.app.interstitial.load()
         #self.cargar_banner()
     
