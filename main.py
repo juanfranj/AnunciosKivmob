@@ -28,7 +28,8 @@ class Pantalla(BoxLayout):
 
     def cargar_anuncios(self):
         self.ids.label.text = "Cargando anuncios"
-        self.app.interstitial = InterstitialAd(TestID.INTERSTITIAL)
+        self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
+        #self.app.interstitial = InterstitialAd(TestID.INTERSTITIAL)
         self.reward = RewardedAd(TestID.REWARD)
         self.app.banner.hide()
 
