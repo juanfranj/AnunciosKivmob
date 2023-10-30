@@ -1,33 +1,37 @@
-from kivmob import KivMob, TestIds
+from kivads import (
+    BannerAd,
+    InterstitialAd,
+    KivAds,
+    RewardedAd,
+    RewardedInterstitial,
+    TestID,
+)
 
 from kivy.app import App 
 from kivy.lang import Builder
+from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
     
     
 
 
 class Pantalla(BoxLayout):
-    ads = KivMob(TestIds.APP)
+    
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.ads.new_banner(TestIds.BANNER,True)
-        self.ads.new_interstitial(TestIds.INTERSTITIAL)
+        self.app = App.get_running_app()
 
     def mostrar(self):
         self.ids.label.text = "Mostrar Banner"
-        self.ads.request_banner()
-        self.ads.show_banner()
+        self.app.banner.show()
 
     def quitar(self):
         self.ids.label.text = "Quitar Banner"
-        self.ads.hide_banner()
+        self.app.benner.hide()
 
     def mostrar_intersticial(self):
         self.ids.label.text = "Mostrar Intersticial"
-        self.ads.request_interstitial()
-        self.ads.show_interstitial()
     
     def mostrar_video(self):
         self.ids.label.text = "Mostrar video"
@@ -37,6 +41,10 @@ class MainApp(App):
     def build(self):
         self.root = Builder.load_file("main.kv")
         self.title = "PruebaAnuncios"
+        self.ads = KivAds()
+        self.banner = BannerAd(TestID.BANNER, int(Window.width))
+
+        
         return self.root
     
 

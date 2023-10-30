@@ -42,7 +42,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements =  python3, kivykivy==2.1.0,pillow
+requirements =  python3, kivy, android, jnius, https://github.com/MichaelStott/KivMob/archive/refs/heads/master.zip
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -112,13 +112,13 @@ android.permissions = INTERNET, ACCESS_NETWORK_STATE
 android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 21
+android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 33
+android.sdk = 33
 
 # (str) Android NDK version to use
-#android.ndk = 25b
+android.ndk = 25b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -185,7 +185,7 @@ android.api = 33
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
-android.add_src = src
+#android.add_src =
 
 # (list) Android AAR archives to add
 #android.add_aars =
@@ -211,7 +211,7 @@ android.add_src = src
 # (list) Gradle dependencies to add
 #android.gradle_dependencies = com.google.firebase:firebase-ads:21.4.0
 #android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
-android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
+#androidx.appcompat:appcompat:1.6.1, androidx.activity:activity:1.6.1
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -270,8 +270,8 @@ android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
+
 #android.meta_data = com.google.android.gms.APPLICATION_ID = ca-app-pub-3378097856628013~1859515228
-android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
 
 
 # (list) Android library project to add (will be added in the
@@ -295,8 +295,8 @@ android.logcat_filters = *:S python:D
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-#android.archs = arm64-v8a, armeabi-v7a
-android.archs = arm64-v8a
+android.archs = arm64-v8a, armeabi-v7a
+
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
 # android.numeric_version = 1
