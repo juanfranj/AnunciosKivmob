@@ -8,9 +8,6 @@
         Rectangle:
             pos: self.pos
             size: self.size
-
-        
-
     Label:
         id: label
         color: 0,0,0,1
@@ -46,5 +43,22 @@
         on_release: root.cargar_anuncios()
         font_size: "30dp"
         color: 0.2,0.2,0.2,0.8
+    Button:
+        text: "Popup"
+        background_normal: ""
+        background_color: 255/255,254/255,145/255,.8
+        on_release: root.mostrar_popup()
+        font_size: "30dp"
+        color: 0.2,0.2,0.2,0.8
+
     Label:
         text:""
+
+<Mensaje_Popup>
+    auto_dismiss: False
+    size_hint: 0.95, 0.95
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    title: "" 
+    separator_height: 0      
+    background_color: [251/255, 252/255, 252/255, 0]
+    

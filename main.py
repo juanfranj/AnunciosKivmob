@@ -11,8 +11,11 @@ from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.popup import Popup
     
-    
+
+class Mensaje_Popup(Popup):
+    pass  
 
 
 class Pantalla(BoxLayout):
@@ -41,6 +44,10 @@ class Pantalla(BoxLayout):
     def mostrar_video(self):
         self.ids.label.text = "Mostrar video"
         self.app.reward.show()
+    
+    def mostrar_popup(self):
+        popup = Mensaje_Popup()
+        popup.open()
 
 class MainApp(MDApp):
 
@@ -59,7 +66,7 @@ class MainApp(MDApp):
 
         return self.root
     
-    def on_pre_enter(self):
+    def on_start(self):
         self.banner.show()
     
 
