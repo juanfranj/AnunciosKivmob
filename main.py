@@ -29,6 +29,7 @@ class Pantalla(BoxLayout):
     def cargar_anuncios(self):
         self.ids.label.text = "Cargando anuncios"
         self.app.interstitial = InterstitialAd(TestID.INTERSTITIAL)
+        self.reward = RewardedAd(TestID.REWARD)
         self.app.banner.hide()
 
     def mostrar_intersticial(self):
@@ -46,6 +47,8 @@ class MainApp(MDApp):
         self.ads = KivAds()
         self.banner = BannerAd(TestID.BANNER, int(Window.width), True)
         self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
+        self.reward = RewardedAd(TestID.REWARD)
+
 
         return self.root
     
