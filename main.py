@@ -27,7 +27,7 @@ class Mensaje_Popup(Popup):
         if not self.app.interstitial.is_loaded() or self.app.interstitial.is_dismissed() is True:
             self.app.interstitial = InterstitialAd("ca-app-pub-3378097856628013/5566502540")
 
-        self.app.banner_ppal.hide()
+        #self.app.banner_ppal.hide()
         self.banner_popup = BannerAd("ca-app-pub-3378097856628013/9783845500", "BANNER", False)
 
         #self.cargar_banner()
