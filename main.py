@@ -13,6 +13,8 @@ from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen
+from kivy.clock import Clock
+from kivy.uix.label import Label
 from time import sleep
     
 
@@ -37,12 +39,6 @@ class Pantalla(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
-
-    def on_pre_enter(self):
-        # while not self.app.banner_ppal.is_loaded():
-        #     print(self.app.banner_ppal.is_loaded())
-        #     sleep(.1)
-        self.app.banner_ppal.show()
 
     def mostrar(self):
         self.ids.label.text = "Banner"
@@ -89,14 +85,22 @@ class MainApp(MDApp):
         self.reward = RewardedAd("ca-app-pub-3378097856628013/7371636283")
         #self.reward = RewardedAd(TestID.REWARD)
         self.reward_interstitial = RewardedInterstitial("ca-app-pub-3378097856628013/4574954697")
+        
+        #self.root.add_widget(Label(text="Esperando a que se cargue el banner...", color = (0,0,0,1)))
 
-
+         # Lanzamos la carga del banner en una corrutina
+        Clock.schedule_once(self.load_banner, 5)
+        
+        
         return self.root
     
+    
+    def load_banner(self, dt):
+        print(f"banner cargando: {self.banner_ppal.is_loaded()}")
+        self.banner_ppal.show()
+    
     # def on_start(self):
-    #     while not self.banner_ppal.is_loaded():
-    #         sleep(.1)
-    #     self.banner_ppal.show()
+    #     print(f"on_start: {self.banner_ppal.is_loaded()}")
     
 if __name__ == '__main__':
     MainApp().run()
