@@ -38,6 +38,11 @@ class Pantalla(Screen):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
 
+    def on_open(self):
+        while not self.app.banner_ppal.is_loaded():
+            sleep(.1)
+        self.banner_ppal.show()
+
     def mostrar(self):
         self.ids.label.text = "Banner"
         self.app.banner_ppal.show()
@@ -87,10 +92,10 @@ class MainApp(MDApp):
 
         return self.root
     
-    def on_start(self):
-        while not self.banner_ppal.is_loaded():
-            sleep(.1)
-        self.banner_ppal.show()
+    # def on_start(self):
+    #     while not self.banner_ppal.is_loaded():
+    #         sleep(.1)
+    #     self.banner_ppal.show()
     
 if __name__ == '__main__':
     MainApp().run()
