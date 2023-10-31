@@ -1,7 +1,7 @@
 # AnunciosKivads
 Repositorio de prueba para incluir anuncios de Admob con la [libreria KivAds](https://github.com/Guhan-SenSam/KivAds)
 
-![Ejemplo Numble](/images/pantalla.png"AppAnuncios")
+![AppAnuncios](/images/pantalla.jpg "AppAnuncios")
 
 Seguir estas [indicaciones](https://github.com/Guhan-SenSam/KivAds/pull/3):
 
