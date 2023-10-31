@@ -40,6 +40,7 @@ class Pantalla(Screen):
 
     def on_enter(self):
         while not self.app.banner_ppal.is_loaded():
+            print(self.app.banner_ppal.is_loaded())
             sleep(.1)
         self.banner_ppal.show()
 
