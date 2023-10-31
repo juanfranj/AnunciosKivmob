@@ -38,7 +38,7 @@ class Pantalla(Screen):
         super().__init__(**kwargs)
         self.app = MDApp.get_running_app()
 
-    def on_enter(self):
+    def on_pre_enter(self):
         while not self.app.banner_ppal.is_loaded():
             print(self.app.banner_ppal.is_loaded())
             sleep(.1)
