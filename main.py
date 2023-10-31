@@ -39,10 +39,10 @@ class Pantalla(Screen):
         self.app = MDApp.get_running_app()
 
     def on_pre_enter(self):
-        while not self.app.banner_ppal.is_loaded():
-            print(self.app.banner_ppal.is_loaded())
-            sleep(.1)
-        self.banner_ppal.show()
+        # while not self.app.banner_ppal.is_loaded():
+        #     print(self.app.banner_ppal.is_loaded())
+        #     sleep(.1)
+        self.app.banner_ppal.show()
 
     def mostrar(self):
         self.ids.label.text = "Banner"
