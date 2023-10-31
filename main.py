@@ -12,6 +12,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.popup import Popup
+from kivy.uix.screenmanager import Screen
 from time import sleep
     
 
@@ -30,7 +31,7 @@ class Mensaje_Popup(Popup):
         self.app.interstitial.load("ca-app-pub-3378097856628013/5566502540")
         self.dismiss()
 
-class Pantalla(BoxLayout):
+class Pantalla(Screen):
     
 
     def __init__(self, **kwargs):
