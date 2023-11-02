@@ -42,7 +42,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0,kivymd==1.0.1,pillow
+requirements = python3,kivy==2.1.0,kivymd==1.0.1,pillow,requests
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -270,10 +270,10 @@ android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-#android.meta_data = com.google.android.gms.APPLICATION_ID=ca-app-pub-3378097856628013~1859515228
+android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3378097856628013~1859515228
 
-##para test
-android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
+##para test     
+#android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
 
 
 # (list) Android library project to add (will be added in the
