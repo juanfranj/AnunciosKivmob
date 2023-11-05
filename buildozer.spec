@@ -112,13 +112,13 @@ android.permissions = INTERNET, ACCESS_NETWORK_STATE
 android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 21
+android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 33
+android.sdk = 33
 
 # (str) Android NDK version to use
-#android.ndk = 25b
+android.ndk = 25b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -216,7 +216,7 @@ android.gradle_dependencies = com.google.android.gms:play-services-ads:22.4.0
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
 # android.enable_androidx requires android.api >= 28
-#android.enable_androidx = True
+android.enable_androidx = True
 
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
